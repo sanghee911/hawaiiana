@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}
+    Home
+{% endblock title %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock css %}
+{% block content %}
+<!-- Carousel -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img class="first-slide"
+                 src="{% static 'home/img/slide-1.jpg' %}"
+                 alt="First slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Aloha!</h1>
+                    <h3>Welcome to Hawaiiana Cafe &amp; Sushi!</h3>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">View Sushi Menu</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img class="second-slide"
+                 src="{% static 'home/img/slide-2.jpg' %}"
+                 alt="Second slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Try our fresh sashimi with rice</h1>
+
+                    <h3>Once you taste the sashimi donburi at Hawaiiana, you will love it!</h3>
+
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">View Donburi Menu</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img class="third-slide"
+                 src="{% static 'home/img/slide-3.jpg' %}"
+                 alt="Third slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>One more for good measure.</h1>
+
+                    <h3>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida
+                        at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</h3>
+
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">View Drink Menu</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div><!-- /.carousel -->
+<div class="container features">
+    <!-- Three columns of text below the carousel -->
+    <div class="row testimonials">
+        <div class="col-lg-4">
+            <h4>“The spicy ahi poke was definitely the best we sampled during our stay on Oahu.”</h4>
+            <p class="quote">A seriously great find. While the wait staff can seem overwhelmed at times,
+                the food was excellent and worth the wait. The spicy ahi poke was definitely
+                the best we sampled during our stay on Oahu. We actually came back for takeout
+                our last night on the island (and I would ship more home if I could).
+                The other sushi was good but not great. BYOB was nice since there's an ABC right across the street.
+                Not a great location for a group since the restaurant is small, but takeout was speedy.
+                I would definitely recommend this local dive in the heart of Waikiki!</p>
+            <p class="customer">- Kim G. Dallas, TX -</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <h4>“Amazing place for seafood and sushi.”</h4>
+            <p class="quote">It is just off the main strip in Waikiki with amazing food and affordable prices.
+                it's definitely worth the stop. We tried the garlic shrimp and the California rolls.
+                I would definitely recommend both. We will be stopping there again before we leave.
+                It's that good!</p>
+            <p class="customer">- Adrian D. Troy MI -</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <h4>"Everything tasted super fresh and was prepared beautifully."</h4>
+            <p class="quote">I couldn't get enough of this place and probably went half a dozen times during the ten days I spent in
+                Hawaii. My favorite dish was the Garlic Shrimp. I found out that it's a secret recipe created by Cliff's
+                wife. He wouldn't tell me what's in it, but I'm determine to get it out of him when I go back to Hawaii.
+                It was great because the garlic tasted fresh and not burnt. There was a sweet flavor to it, but it had a
+                kick too. I can't wrap my finger around what all the different flavors were...darn!</p>
+            <p class="customer">- Christina P. Tustin, CA -</p>
+        </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+    <!-- START THE FEATURETTES -->
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Try our spicy shrimp! <span
+                    class="text-muted">It'll blow your mind.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+                semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+                commodo.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive center-block" src="http://placehold.it/500x500"
+                 alt="Generic placeholder image">
+        </div>
+    </div>
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+            <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">Try for yourself.</span>
+            </h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+                semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+                commodo.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+            <img class="featurette-image img-responsive center-block" src="http://placehold.it/500x500"
+                 alt="Generic placeholder image">
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
+                semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+                commodo.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive center-block" src="http://placehold.it/500x500"
+                 alt="Generic placeholder image">
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <!-- /END THE FEATURETTES -->
+    <!-- FOOTER -->
+</div><!-- /.container -->
+{% endblock content %}

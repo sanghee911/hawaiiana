@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}
+    Menu - Nigiri
+{% endblock title %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'menu/css/menu.css' %}">
+{% endblock css %}
+{% block content %}
+    <div class="container menu">
+        <div class="row bento">
+            <div class="col-sm-12">
+                <h1 class="menu-title">Bento</h1>
+            </div>
+        </div>
+        <div class="row">
+            {% for bento in bentoes %}
+                <div class="col-sm-6 menu-item">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <span class="item-name">{{ bento }}</span>
+                            <span class="item-description text-muted">{{ bento.description }}</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span class="item-price">${{ bento.price }}</span>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div><!-- /.row -->
+        <div class="row nigiri">
+            <div class="col-sm-12">
+                <h1 class="menu-title">Nigiri Sushi</h1>
+            </div>
+        </div>
+        <div class="row">
+            {% for nigiri in nigiries %}
+                <div class="col-sm-6 menu-item">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <span class="item-name">{{ nigiri }}</span>
+                            <span class="item-description text-muted">{{ nigiri.description }}</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span class="item-price">${{ nigiri.price }}</span>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+{% endblock content %}

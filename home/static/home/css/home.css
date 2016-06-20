@@ -1,0 +1,23 @@
+.first-slide, .second-slide, .third-slide {
+    height: 500px;
+}
+.carousel-caption {
+    /*color: #0f0f0f;*/
+    font-weight: bolder;
+    text-shadow: 1px 1px #000;
+}
+.carousel {
+    margin-bottom: 60px;
+}
+.testimonials {
+    text-align: center;
+}
+.testimonials h4 {
+    color: darkred;
+}
+.testimonials .quote {
+    text-align: justify;
+}
+.customer {
+    color: darkgreen;
+}
